@@ -1,0 +1,55 @@
+.TH MANTA-HASH 1 "manta-hash v1.0.0" "Manta Tools" "User Commands"
+.SH NAME
+manta-hash \- compute file hashes with multiple algorithms
+.SH SYNOPSIS
+.B hash [options] <file...>
+.SH DESCRIPTION
+Reads files or stdin and outputs one or more hashes using stdlib only. Supports MD5, SHA1, SHA256, SHA512, and BLAKE2b.
+.SH OPTIONS
+.TP
+.B file...
+One or more files to hash (use - for stdin)
+.TP
+.B --md5
+Compute MD5 hash
+.TP
+.B --sha1
+Compute SHA-1 hash
+.TP
+.B --sha256
+Compute SHA-256 hash (default)
+.TP
+.B --sha512
+Compute SHA-512 hash
+.TP
+.B --blake2b
+Compute BLAKE2b hash
+.TP
+.B --version
+Show version and exit
+.SH EXAMPLES
+.TP
+Default SHA-256
+.B hash file.txt
+.TP
+Multiple algorithms
+.B hash --md5 --sha256 file.txt
+.TP
+Hash from stdin
+.B cat file.txt | hash -
+.TP
+Hash multiple files
+.B hash file1.txt file2.txt file3.txt
+.SH EXIT CODES
+.TP
+.B 0
+Success
+.TP
+.B 1
+File not found or read error
+.SH AUTHOR
+Bobby Hansen Jr. (Hansen Capital Group LLC)
+.SH REPORTING BUGS
+https://github.com/jrbobbyhansen-pixel/hash/issues
+.SH COPYRIGHT
+Copyright 2026 Hansen Capital Group LLC. License MIT.
