@@ -1,0 +1,7 @@
+# Example .pre-commit-config.yaml for using manta-hash
+# Add to your project root and run: pre-commit install
+repos:
+- repo: https://github.com/jrbobbyhansen-pixel/hash
+  rev: v1.0.0
+  hooks:
+  - id: hash-verify

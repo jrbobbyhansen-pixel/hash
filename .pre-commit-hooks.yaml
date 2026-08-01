@@ -1,0 +1,11 @@
+repos:
+- repo: https://github.com/jrbobbyhansen-pixel/hash
+  rev: v1.0.0
+  hooks:
+  - id: hash-verify
+    name: hash verify
+    description: Verify file integrity with SHA-256
+    entry: hash
+    language: python
+    files: '\.(py|js|ts|json|yaml|yml|toml|cfg|ini)$'
+    pass_filenames: true
