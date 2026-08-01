@@ -86,7 +86,7 @@ def main():
             ]
 
             # Benchmark manta-hash
-            hash_script = os.path.join(os.path.dirname(__file__), "..", "hash.py")
+            hash_script = os.path.join(os.path.dirname(__file__), "hash.py")
             if os.path.exists(hash_script):
                 r = benchmark_tool(
                     "manta-hash",
