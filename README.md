@@ -16,6 +16,16 @@ hash --md5 --sha256 --blake2b ./somefile.iso
 cat ./somefile.iso | hash --sha512
 ```
 
+## Benchmarks
+
+| Test | Files (1KB each) | manta-hash | sha256sum (baseline) |
+|------|-----------------|-----------|---------------------|
+| Small | 5 | 0.04s, 0.04MB | 0.005s, 0.07MB |
+| Medium | 20 | 0.05s, 0.05MB | 0.006s, 0.07MB |
+| Large | 50 | 0.04s, 0.05MB | 0.007s, 0.07MB |
+
+Run your own: `python3 benchmark_hash.py`
+
 ## License
 
 MIT
